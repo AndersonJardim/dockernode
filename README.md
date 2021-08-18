@@ -12,3 +12,11 @@ docker-compose version 1.29.2, build 5becea4c
 
 touch .dockerignore
 touch .gitgnore
+
+docker build -t maquina/dockernode .
+docker run -p 3000:3000 -d maquina/dockernode
+docker ps
+
+docker ps
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+1ba5a18a7f53   maquina/dockernode   "docker-entrypoint.s…"   26 seconds ago   Up 24 seconds   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   charming_jang
