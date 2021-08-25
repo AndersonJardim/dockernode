@@ -20,3 +20,17 @@ docker ps
 docker ps
 CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS          PORTS                                       NAMES
 1ba5a18a7f53   maquina/dockernode   "docker-entrypoint.s…"   26 seconds ago   Up 24 seconds   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   charming_jang
+
+
+npm install nodemon
+docker build -t maquina/dockernode .
+docker run -p 3000:3000 -d maquina/dockernode
+docker-compose up
+
+
+## parar pois já estava sendo utilizada
+docker ps
+docker stop 1ba5a18a7f53
+
+docker-compose up
+docker build -t maquina/dockernode .
